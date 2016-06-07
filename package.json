@@ -1,16 +1,33 @@
 {
-  "name": "proto",
+  "name": "proto-proper",
   "version": "1.0.0-beta.0",
-  "description": "",
+  "description": "A generic & helpful prototype object upon which new prototypes can be based",
   "authors": [
     "Brandon Sara (http://bsara.github.io)"
   ],
   "license": "",
-  "homepage": "https://github.com/bsara/proto.js#readme",
-  "repository": "bsara/proto.js",
+  "homepage": "https://github.com/bsara/proto-proper.js#readme",
+  "repository": "bsara/proto-proper.js",
   "keywords": [
+    "proper",
     "proto",
+    "proto-js",
+    "proto.js",
+    "protojs",
+    "protos",
+    "protos-js",
+    "protos.js",
+    "protosjs",
     "prototype",
+    "prototype-js",
+    "prototype.js",
+    "prototypejs",
+    "prototypes",
+    "prototypes-js",
+    "prototypes.js",
+    "prototypesjs",
+    "object",
+    "objects",
     "oo",
     "oop",
     "inherit",
@@ -22,13 +39,27 @@
   "scripts": {
     "test": "gulp test"
   },
-  "main": "dist/proto.es5.js",
+  "main": "dist/proto-proper.es5.js",
   "files": [
-    "/dist/*.js",
-    "/dist/*.map",
+    "/dist/*.*",
     "/LICENSE",
     "/README.md"
   ],
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "del": "^2.2.0",
+    "escape-string-regexp": "^1.0.5",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^2.0.0",
+    "gulp-ignore": "^2.0.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.2.1",
+    "uglify-js-harmony": "^2.6.2"
   }
 }

@@ -1,0 +1,12 @@
+.git/
+
+.temp/
+.tmp/
+
+node_modules/
+
+build/
+dist/
+reports/
+temp/
+tmp/

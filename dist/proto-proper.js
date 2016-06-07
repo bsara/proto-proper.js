@@ -1,6 +1,29 @@
-/**
- * TODO: INSERT COPYRIGHT HERE
+/*!
+ * proto-proper.js (1.0.0-beta.0)
+ *
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2016 Brandon Sara (http://bsara.github.io/)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
+
 
 
 /**
@@ -14,7 +37,7 @@
  *
  *
  * @example
- * // Creating a new prototype
+ * // Creating a New Prototype
  *
  * let MyObject = Proto.newPrototype();
  *
@@ -23,7 +46,7 @@
  *
  *
  * @example
- * // Creating a new prototype from your custom prototype
+ * // Inheritance From a Custom Prototype
  *
  * let MyObject = Proto.newPrototype();
  *
@@ -36,7 +59,7 @@
  *
  *
  * @example
- * // Creating a new instance of your custom prototype
+ * // Object Instantiation
  * let obj = MyObject.new( ... );
  */
 let Proto = Object.create(Object.prototype);
@@ -57,7 +80,7 @@ Object.assign(Proto, {
   /**
    * Creates a new instance of this prototype.
    *
-   * This function is to be called insted of using the `new` keyword.
+   * This function is to be called **instead of** using the `new` keyword.
    *
    * Any arguments passed to this function will be used as the
    * arguments for the call made to the `init` function.
@@ -124,8 +147,8 @@ Object.assign(Proto, {
    * childObj.instanceOf(Proto);            // returns `true`
    * childObj.instanceOf(Object.prototype); // returns `true`
    *
-   * @returns {!Boolean} `true` if the given `proto` is found in the prototype
-   *                     chain of this object; otherwise, returns `false`.
+   * @returns {Boolean} `true` if the given `proto` is found in the prototype
+   *                    chain of this object; otherwise, returns `false`.
    */
   instanceOf(proto) {
     if (proto === this || proto === Proto || proto === Object.prototype) {
