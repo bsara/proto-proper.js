@@ -10,15 +10,15 @@ inheritance, and for obtaining useful information about a prototype.
 
 
 
-## Install
+# Install
 
 - **NPM:** `npm install --save proto-proper`
-- **CDN - ES6:** `<script src="https://npmcdn.com/proto-proper@1.0.0-beta.4/dist/proto-proper.js"></script>`
-- **CDN - ES5:** `<script src="https://npmcdn.com/proto-proper@1.0.0-beta.4/dist/proto-proper.es5.min.js"></script>`
+- **CDN - ES6:** `https://npmcdn.com/proto-proper@1.0.0-beta.5/dist/proto-proper.js`
+- **CDN - ES5:** `https://npmcdn.com/proto-proper@1.0.0-beta.5/dist/proto-proper.es5.min.js`
 
 
 
-## Usage
+# Usage
 
 #### Creating a New Prototype
 
@@ -52,7 +52,7 @@ let obj = MyObject.new( ... );
 
 
 
-## API Docs
+# API Docs
 
 ### Proto
 
