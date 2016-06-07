@@ -1,0 +1,34 @@
+{
+  "name": "proto",
+  "version": "1.0.0-beta.0",
+  "description": "",
+  "authors": [
+    "Brandon Sara (http://bsara.github.io)"
+  ],
+  "license": "",
+  "homepage": "https://github.com/bsara/proto.js#readme",
+  "repository": "bsara/proto.js",
+  "keywords": [
+    "proto",
+    "prototype",
+    "oo",
+    "oop",
+    "inherit",
+    "inheritance"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "main": "dist/proto.es5.js",
+  "files": [
+    "/dist/*.js",
+    "/dist/*.map",
+    "/LICENSE",
+    "/README.md"
+  ],
+  "devDependencies": {
+  }
+}
