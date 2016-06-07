@@ -1,5 +1,5 @@
 /*!
- * proto-proper.js (1.0.0-beta.2)
+ * proto-proper.js (1.0.0-beta.4)
  *
  * The MIT License (MIT)
  *

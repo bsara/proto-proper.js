@@ -13,8 +13,8 @@ inheritance, and for obtaining useful information about a prototype.
 ## Install
 
 - **NPM:** `npm install --save proto-proper`
-- **CDN - ES6:** `<script src="https://npmcdn.com/proto-proper@1.0.0-beta.3/dist/proto-proper.js"></script>`
-- **CDN - ES5:** `<script src="https://npmcdn.com/proto-proper@1.0.0-beta.3/dist/proto-proper.es5.min.js"></script>`
+- **CDN - ES6:** `<script src="https://npmcdn.com/proto-proper@1.0.0-beta.4/dist/proto-proper.js"></script>`
+- **CDN - ES5:** `<script src="https://npmcdn.com/proto-proper@1.0.0-beta.4/dist/proto-proper.es5.min.js"></script>`
 
 
 
