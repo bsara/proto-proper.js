@@ -9,13 +9,30 @@
 inheritance, and for obtaining useful information about a prototype.
 
 
+<br/>
+<br/>
+
 
 # Install
 
-- **NPM:** `npm install --save proto-proper`
-- **CDN - ES6:** `https://npmcdn.com/proto-proper@1.0.0-beta.5/dist/proto-proper.js`
-- **CDN - ES5:** `https://npmcdn.com/proto-proper@1.0.0-beta.5/dist/proto-proper.es5.min.js`
+**NPM**
+```shell
+$ npm install --save proto-proper
+```
 
+**CDN (ES5)**
+```html
+<script src="//npmcdn.com/proto-proper@1.0.0-beta.6/dist/proto-proper.es5.min.js"></script>
+```
+
+**CDN (ES6)**
+```html
+<script src="//npmcdn.com/proto-proper@1.0.0-beta.6/dist/proto-proper.js"></script>
+```
+
+
+<br/>
+<br/>
 
 
 # Usage
@@ -50,6 +67,9 @@ MyChildObject.init = function(options) { ... };
 let obj = MyObject.new( ... );
 ```
 
+
+<br/>
+<br/>
 
 
 # API Docs
