@@ -9,9 +9,6 @@
 inheritance, and for obtaining useful information about a prototype.
 
 
-<br/>
-<br/>
-
 
 # Install
 
@@ -22,12 +19,12 @@ $ npm install --save proto-proper
 
 **CDN (ES5)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.6/dist/proto-proper.es5.min.js"></script>
+<script src="//npmcdn.com/proto-proper@1.0.0-beta.7/dist/proto-proper.es5.min.js"></script>
 ```
 
 **CDN (ES6)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.6/dist/proto-proper.js"></script>
+<script src="//npmcdn.com/proto-proper@1.0.0-beta.7/dist/proto-proper.js"></script>
 ```
 
 

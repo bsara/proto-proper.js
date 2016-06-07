@@ -1,6 +1,6 @@
 {
   "name": "proto-proper",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "description": "A generic and helpful prototype object upon which new prototypes can be based",
   "authors": [
     "Brandon Sara (http://bsara.github.io)"
