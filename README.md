@@ -1,5 +1,5 @@
 
-# proto-proper.js
+# proto-proper.js [![NPM Package](https://img.shields.io/npm/v/proto-proper.svg?style=flat-square)](https://www.npmjs.com/package/proto-proper)
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/bsara/proto.js/blob/master/LICENSE)
 
