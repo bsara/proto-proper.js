@@ -5,8 +5,9 @@
 
 > A generic & helpful prototype object upon which new prototypes can be based.
 
-`Proto` contains functions useful for prototype creation, manipulation,
-inheritance, and for obtaining useful information about a prototype.
+The `Proto` object provided by this library contains functions useful for prototype
+creation, manipulation, inheritance, and for obtaining useful information about a
+prototype.
 
 **Don't know much about prototypal based object-oriented programming or want to
 understand it better?** [*Prototypal Object-Oriented Programming using
