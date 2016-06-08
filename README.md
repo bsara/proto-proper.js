@@ -1,12 +1,27 @@
 
-# proto-proper.js [![NPM Package](https://img.shields.io/npm/v/proto-proper.svg?style=flat-square)](https://www.npmjs.com/package/proto-proper)
+# proto-proper.js [![NPM Package](https://img.shields.io/npm/v/proto-proper.svg?style=flat-square)][npm]
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/bsara/proto.js/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
 
 > A generic & helpful prototype object upon which new prototypes can be based.
 
 `Proto` contains functions useful for prototype creation, manipulation,
 inheritance, and for obtaining useful information about a prototype.
+
+**Don't know much about prototypal based object-oriented programming or want to
+understand it better?** [*Prototypal Object-Oriented Programming using
+JavaScript*][article] by [Mehdi Maujood][article-author] is an excellent, short
+article from [*A List Apart*][a-list-apart] which is an excellent starting point
+for understanding prototypal based OOP and how it is/can be used in JavaScript.
+
+
+**Library Sizes**
+
+| Format                                              | Size     |
+|:----------------------------------------------------|:---------|
+| ES5 Minified ([`proto-proper.es5.min.js`][es5-min]) | ~0.9 kB  |
+| ES5 Unminified ([`proto-proper.es5.js`][es5])       | ~5.5 kB  |
+| ES6 Unminified ([`proto-proper.js`][es6])           | ~4.96 kB |
 
 
 
@@ -19,12 +34,12 @@ $ npm install --save proto-proper
 
 **CDN (ES5)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.8/dist/proto-proper.es5.min.js"></script>
+<script src="//npmcdn.com/proto-proper@1.0.0-beta.9/dist/proto-proper.es5.min.js"></script>
 ```
 
 **CDN (ES6)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.8/dist/proto-proper.js"></script>
+<script src="//npmcdn.com/proto-proper@1.0.0-beta.9/dist/proto-proper.js"></script>
 ```
 
 
@@ -206,3 +221,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+
+
+
+[license]: https://github.com/bsara/proto.js/blob/master/LICENSE "License"
+[npm]:     https://www.npmjs.com/package/proto-proper "NPM Package: proto-proper"
+
+[a-list-apart]:   http://alistapart.com "A List Apart"
+[article]:        http://alistapart.com/article/prototypal-object-oriented-programming-using-javascript "Prototypal Object Oriented Programming using Javascript"
+[article-author]: http://alistapart.com/author/mehdi-maujood "A List Apart Author: Mehdi Maujood"
+
+[es5]:     https://github.com/bsara/proto-proper.js/blob/master/dist/proto-proper.es5.js "proto-proper.es5.js"
+[es5-min]: https://github.com/bsara/proto-proper.js/blob/master/dist/proto-proper.es5.min.js "proto-proper.es5.min.js"
+[es6]:     https://github.com/bsara/proto-proper.js/blob/master/dist/proto-proper.js "proto-proper.js"
