@@ -11,7 +11,7 @@ inheritance, and for obtaining useful information about a prototype.
 **Don't know much about prototypal based object-oriented programming or want to
 understand it better?** [*Prototypal Object-Oriented Programming using
 JavaScript*][article] by [Mehdi Maujood][article-author] is an excellent, short
-article from [*A List Apart*][a-list-apart] which is an excellent starting point
+article from [*A List Apart*][a-list-apart] which is a great starting point
 for understanding prototypal based OOP and how it is/can be used in JavaScript.
 
 
