@@ -35,12 +35,12 @@ $ npm install --save proto-proper
 
 **CDN (ES5)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.9/dist/proto-proper.es5.min.js"></script>
+<script src="//unpkg.com/proto-proper@1.0.0-beta.9/dist/proto-proper.es5.min.js"></script>
 ```
 
 **CDN (ES6)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.9/dist/proto-proper.js"></script>
+<script src="//unpkg.com/proto-proper@1.0.0-beta.9/dist/proto-proper.js"></script>
 ```
 
 
