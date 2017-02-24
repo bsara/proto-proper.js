@@ -1,25 +1,21 @@
+/* eslint-env node */
+/* eslint no-console: 'off' */
 /*
- * The MIT License (MIT)
+ * ISC License (ISC)
  *
- * Copyright (c) 2016 Brandon Sara (http://bsara.github.io/)
+ * Copyright (c) 2017 Brandon Sara (http://bsara.github.io/)
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
 const gulp           = require('gulp');
@@ -55,67 +51,50 @@ String.SPACE = ' ';
 // Configuration             //
 // ------------------------- //
 
-var config = {
+const config = {
   pkg: require('./package.json'),
 
-  build:   { dir: 'build' },
-  dist:    { dir: 'dist' },
-  src:     { dir: 'src' },
-  test:    { dir: 'test' },
+  isDist: false,
 
-  lint:   {},
-  uglify: {
-    verbose: true,
-    mangle:  true
-  }
+  build: { dir: 'build' },
+  dist:  { dir: 'dist' },
+  src:   { dir: 'src' },
+  test:  { dir: 'test' }
 };
-
-
-config.lint.selectors = [
-  'gulpfile.js',
-  path.join(config.src.dir, '**/*.js'),
-  path.join(config.test.dir, '**/*.js')
-];
 
 
 config.partialFullLicenseComment =
 `
- * The MIT License (MIT)
+ * ISC License (ISC)
  *
  * Copyright (c) ${(new Date()).getFullYear()} Brandon Sara (http://bsara.github.io/)
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 `;
 
-config.oldFullFileHeader = `/*!${config.partialFullLicenseComment}`;
+config.oldFullFileHeader = `/**!${config.partialFullLicenseComment}`;
 
 config.newFullFileHeader =
-`/*!
+`/**!
  * ${config.pkg.name}.js (${config.pkg.version})
  *${config.partialFullLicenseComment}`;
 
 config.minifiedFileHeader =
-`/*!
+`/**!
  * ${config.pkg.name}.js (${config.pkg.version})
  * Copyright (c) ${(new Date()).getFullYear()} Brandon Sara (http://bsara.github.io)
- * Licensed under the MIT license (https://github.com/${config.pkg.repository}/blob/master/LICENSE)
+ * Licensed under the ISC license (https://github.com/${config.pkg.repository}/blob/master/LICENSE)
  */
 `;
 
@@ -144,22 +123,22 @@ config.umdFooter = '\n}));\n';
 // ------------------------- //
 
 function onError(err) {
-  var msg = String.EMPTY;
+  let msg = String.EMPTY;
 
   if (err.fileName != null) {
-   msg = `ERROR IN ${err.fileName}`;
+    msg = `ERROR IN ${err.fileName}`;
 
-   if (err.lineNumber != null) {
-     msg += ` (line number: ${err.lineNumber})`;
-   }
+    if (err.lineNumber != null) {
+      msg += ` (line number: ${err.lineNumber})`;
+    }
 
-   msg += ':\n              ';
+    msg += ':\n              ';
   }
 
   if (err.message != null) {
-   msg += err.message;
+    msg += err.message;
   } else if (typeof err === 'string') {
-   msg = err;
+    msg = err;
   }
 
   util.log(util.colors.red(msg));
@@ -176,8 +155,8 @@ gulp.task('default', [ 'help' ]);
 
 
 gulp.task('help', function() {
-  var header = util.colors.bold.blue;
-  var task   = util.colors.green;
+  const header = util.colors.bold.blue;
+  const task   = util.colors.green;
 
   console.log(String.EMPTY);
   console.log(header(`${config.pkg.name}.js Gulp Tasks`));
@@ -218,7 +197,7 @@ gulp.task('build', function() {
              .pipe(gulp.dest(config.build.dir))
              .pipe(ignore.exclude('*.map'))
              .pipe(sourcemaps.init({ loadMaps: true }))
-               .pipe(uglifyMinifier(config.uglify, uglifyHarmony)).on('error', onError)
+               .pipe(uglifyMinifier({ verbose: true, mangle: true }, uglifyHarmony)).on('error', onError)
                .pipe(insert.prepend(config.minifiedFileHeader))
                .pipe(rename({ suffix: '.min' }))
              .pipe(sourcemaps.write('.', { sourceRoot: null }))
@@ -231,7 +210,9 @@ gulp.task('rebuild', function(callback) {
 });
 
 
-gulp.task('dist', function() {
+gulp.task('dist', function(callback) {
+  config.isDist = true;
+
   return runSequence('lint', 'test', 'clean:dist', function(err) {
     if (err) {
       callback(err);
@@ -251,7 +232,7 @@ gulp.task('dist', function() {
 // ----------------
 
 gulp.task('test', [ 'rebuild' ], function() {
-  util.log(util.colors.yellow("Tests are not yet implemented!"));
+  util.log(util.colors.yellow.bold("Linting not yet implemented!"));
 });
 
 
@@ -265,9 +246,19 @@ gulp.task('clean:build', () => del(config.build.dir));
 gulp.task('clean:dist',  () => del(config.dist.dir));
 
 
+
 // Lint Tasks
 // ----------------
 
 gulp.task('lint', function() {
-  util.log(util.colors.yellow("Linting not yet implemented!"));
+  gulp.src([
+        /* eslint-disable indent */
+        'gulpfile.js',
+        'package.json',
+        path.join(config.src.dir, '**/*.js'),
+        path.join(config.test.dir, '**/*.js')
+      ]) /* eslint-enable indent */
+      .pipe(eslint({ rules: (config.isDist ? { 'no-console': 'error', 'no-debugger': 'error' } : undefined) }))
+      .pipe(eslint.format('stylish'))
+      .pipe(eslint.failAfterError());
 });
