@@ -1,5 +1,5 @@
 /**!
- * proto-proper.js (1.0.0)
+ * proto-proper.js (1.0.1)
  *
  * ISC License (ISC)
  *
