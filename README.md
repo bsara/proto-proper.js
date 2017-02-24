@@ -18,11 +18,11 @@ for understanding prototypal based OOP and how it is/can be used in JavaScript.
 
 **Library Sizes**
 
-| Format                                              | Size     |
-|:----------------------------------------------------|:---------|
-| ES5 Minified ([`proto-proper.es5.min.js`][es5-min]) | ~0.9 kB  |
-| ES5 Unminified ([`proto-proper.es5.js`][es5])       | ~5.5 kB  |
-| ES6 Unminified ([`proto-proper.js`][es6])           | ~4.96 kB |
+| Format                                              | Size    |
+|:----------------------------------------------------|:--------|
+| ES5 Minified ([`proto-proper.es5.min.js`][es5-min]) | ~0.9 kB |
+| ES5 Unminified ([`proto-proper.es5.js`][es5])       | ~5.2 kB |
+| ES6 Unminified ([`proto-proper.js`][es6])           | ~4.7 kB |
 
 
 
