@@ -5,67 +5,67 @@
 
 # Documents
 
-*.doc   binary
-*.docx  binary
-*.dot   binary
-*.dotx  binary
-*.xls   binary
-*.xlsx  binary
-*.xlt   binary
-*.xltm  binary
-*.odb   binary
-*.odf   binary
-*.odg   binary
-*.odi   binary
-*.odp   binary
-*.ods   binary
-*.odt   binary
-*.otc   binary
-*.otg   binary
-*.oti   binary
-*.otp   binary
-*.ots   binary
-*.ott   binary
-*.pdf   binary
-*.ppt   binary
-*.pptx  binary
-*.ps    binary
+*.doc   binary diff=exif
+*.docx  binary diff=docx
+*.dot   binary diff=exif
+*.dotx  binary diff=exif
+*.xls   binary diff=exif
+*.xlsx  binary diff=exif
+*.xlt   binary diff=exif
+*.xltm  binary diff=exif
+*.odb   binary diff=exif
+*.odf   binary diff=exif
+*.odg   binary diff=exif
+*.odi   binary diff=exif
+*.odp   binary diff=exif
+*.ods   binary diff=exif
+*.odt   binary diff=odt
+*.otc   binary diff=exif
+*.otg   binary diff=exif
+*.oti   binary diff=exif
+*.otp   binary diff=exif
+*.ots   binary diff=exif
+*.ott   binary diff=exif
+*.pdf   binary diff=exif
+*.ppt   binary diff=exif
+*.pptx  binary diff=exif
+*.ps    binary diff=exif
 
 
 # Fonts
 
 *.eot   binary
-*.otf   binary
-*.ttc   binary
-*.ttf   binary
+*.otf   binary diff=exif
+*.ttc   binary diff=exif
+*.ttf   binary diff=exif
 *.woff  binary
 
 
 # Audio Visual
 
-*.fla   binary
-*.flv   binary
-*.mov   binary
-*.mp3   binary
-*.mp4   binary
-*.swf   binary
+*.fla   binary diff=exif
+*.flv   binary diff=exif
+*.mov   binary diff=exif
+*.mp3   binary diff=exif
+*.mp4   binary diff=exif
+*.swf   binary diff=exif
 
 
 # Images
 
-*.ai    binary
-*.bmp   binary
-*.gif   binary
+*.ai    binary diff=exif
+*.bmp   binary diff=exif
+*.gif   binary diff=exif
 *.hqx   binary
 *.icns  binary
 *.ico   binary
-*.jpeg  binary
-*.jpg   binary
-*.png   binary
-*.psd   binary
+*.jpeg  binary diff=exif
+*.jpg   binary diff=exif
+*.png   binary diff=exif
+*.psd   binary diff=exif
 *.svg   text
-*.tif   binary
-*.tiff  binary
+*.tif   binary diff=exif
+*.tiff  binary diff=exif
 
 
 # Archives
@@ -73,10 +73,10 @@
 *.7z    binary
 *.cab   binary
 *.ear   binary
-*.gz    binary
+*.gz    binary diff=exif
 *.jar   binary
-*.rar   binary
+*.rar   binary diff=exif
 *.tar   binary
 *.tgz   binary
 *.war   binary
-*.zip   binary
+*.zip   binary diff=exif

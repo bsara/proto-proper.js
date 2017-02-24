@@ -1,50 +1,25 @@
+root: true
+
+
+extends:
+  - bsara
+
 parserOptions:
-  ecmaVersion: 6
+  sourceType: module
+
 
 rules:
-  # Misc
-  strict: off
+  # Possible Errors
+  # ----------------------------------------------------------
 
-  # Error Avoidance & Best Practices
-  block-scoped-var: error
-  comma-dangle: error
-  consistent-return: warn
-  curly: error
-  eqeqeq:
-    - error
-    - allow-null
-  linebreak-style:
-    - error
-    - unix
-  semi:
-    - error
-    - always
-  no-cond-assign: error
-  no-console: error
-  no-constant-condition: error
-  no-debugger: warn
-  no-dupe-keys: error
-  no-empty:
-    - error
-    - allowEmptyCatch: true
-  no-labels: error
-  no-undef: error
-  no-unreachable: error
-  no-unused-vars: error
-  vars-on-top: off
-  wrap-iife:
-    - error
-    - inside
+  # Disabled
+  no-console: off
+  no-debugger: off
 
-  # Code Style
-  indent:
-    - error
-    - 2
-  max-depth:
-    - error
-    - 3
-  no-else-return: error
-  yoda:
-    - error
-    - never
-    - exceptRange: true
+
+
+  # Node.js and CommonJS
+  # ----------------------------------------------------------
+
+  # Disabled
+  global-require: off

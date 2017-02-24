@@ -1,13 +1,13 @@
 
 # proto-proper.js [![NPM Package](https://img.shields.io/npm/v/proto-proper.svg?style=flat-square)][npm]
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
+[![ISC License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)][license]
 
 > A generic & helpful prototype object upon which new prototypes can be based.
 
-The `Proto` object provided by this library contains functions useful for prototype
-creation, manipulation, inheritance, and for obtaining useful information about a
-prototype.
+The `Proto` object provided by this library contains functions useful for
+prototype creation, manipulation, inheritance, and the retrieval of useful
+information about a prototype.
 
 **Don't know much about prototypal based object-oriented programming or want to
 understand it better?** [*Prototypal Object-Oriented Programming using
@@ -35,12 +35,12 @@ $ npm install --save proto-proper
 
 **CDN (ES5)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.9/dist/proto-proper.es5.min.js"></script>
+<script src="//npmcdn.com/proto-proper@1.0.0/dist/proto-proper.es5.min.js"></script>
 ```
 
 **CDN (ES6)**
 ```html
-<script src="//npmcdn.com/proto-proper@1.0.0-beta.9/dist/proto-proper.js"></script>
+<script src="//npmcdn.com/proto-proper@1.0.0/dist/proto-proper.js"></script>
 ```
 
 
@@ -199,35 +199,51 @@ childObj.instanceOf(Object.prototype); // returns `true`
 
 
 
+# Building the Project
+
+> The project is built using [Gulp.js](http://gulpjs.com/). To install Gulp.js,
+refer to [the Gulp.js "Getting Started" docs](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
+
+First, install all dependent node modules by running the following command at
+the root of the project:
+
+```sh
+$ npm i
+```
+
+After you have installed all dependent NPM packages, run the following at the
+root of the project for a list of available gulp tasks:
+
+```sh
+$ gulp help
+```
+
+
+
 # License
 
-The MIT License (MIT)
+ISC License (ISC)
 
-Copyright (c) 2016 Brandon Sara (http://bsara.github.io/)
+Copyright (c) 2017 Brandon Sara (http://bsara.github.io/)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 
 
 
 
-[license]: https://github.com/bsara/proto.js/blob/master/LICENSE "License"
+
+[license]: https://github.com/bsara/proto-proper.js/blob/master/LICENSE "License"
 [npm]:     https://www.npmjs.com/package/proto-proper "NPM Package: proto-proper"
 
 [a-list-apart]:   http://alistapart.com "A List Apart"

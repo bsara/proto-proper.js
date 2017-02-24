@@ -1,11 +1,11 @@
 {
   "name": "proto-proper",
-  "version": "1.0.0-beta.10",
+  "version": "1.0.0",
   "description": "A generic and helpful prototype object upon which new prototypes can be based",
   "authors": [
     "Brandon Sara (http://bsara.github.io)"
   ],
-  "license": "",
+  "license": "ISC",
   "homepage": "https://github.com/bsara/proto-proper.js#readme",
   "repository": "bsara/proto-proper.js",
   "keywords": [
@@ -34,32 +34,41 @@
     "inheritance"
   ],
   "directories": {
-    "test": "test"
+    "test": "test",
+    "lib": "src"
   },
-  "scripts": {
-    "test": "gulp test"
-  },
-  "main": "dist/proto-proper.es5.js",
   "files": [
-    "/dist/*.*",
-    "/LICENSE",
-    "/README.md"
+    "/dist/*.*"
   ],
+  "main": "dist/proto-proper.es5.js",
+  "scripts": {
+    "test": "gulp test",
+    "bump": "npm run bump:patch",
+    "bump:major": "npm --no-git-tag-version version major",
+    "bump:minor": "npm --no-git-tag-version version minor",
+    "bump:patch": "npm --no-git-tag-version version patch",
+    "postversion": "gulp dist && push-changed-version-ref-files",
+    "prepublish": "gulp dist && git add -A && git commit -m 'publish preparation' && tag-version",
+    "postpublish": "npm run bump"
+  },
   "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
-    "del": "^2.2.0",
+    "babel-preset-es2015": "^6.22.0",
+    "del": "^2.2.2",
     "escape-string-regexp": "^1.0.5",
+    "eslint": "^3.16.1",
+    "eslint-config-bsara": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-eslint": "^2.0.0",
-    "gulp-ignore": "^2.0.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-ignore": "^2.0.2",
     "gulp-insert": "^0.5.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7",
-    "run-sequence": "^1.2.1",
-    "uglify-js-harmony": "^2.6.2"
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "npm-scripts-versioning": "^1.0.0-beta.0",
+    "run-sequence": "^1.2.2",
+    "uglify-js-harmony": "^2.7.5"
   }
 }
