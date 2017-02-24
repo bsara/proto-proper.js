@@ -232,7 +232,7 @@ gulp.task('dist', function(callback) {
 // ----------------
 
 gulp.task('test', [ 'rebuild' ], function() {
-  util.log(util.colors.yellow.bold("Linting not yet implemented!"));
+  util.log(util.colors.yellow.bold("Tests not yet implemented!"));
 });
 
 
